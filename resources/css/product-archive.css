@@ -1,0 +1,225 @@
+.archiveBanner .subTitle {
+  color: var(--button);
+}
+
+.catalogWrapper {
+  display: grid !important;
+  grid-template-columns: 25% 1fr;
+  align-items: start;
+  gap: 25px;
+}
+
+.catalogWrapper .filter__form {
+  padding: 25px;
+  border: 1px solid #b0bfd2;
+  border-radius: 20px;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.catalogWrapper .filter__form .closeFilter {
+  position: absolute;
+  top: 27px;
+  left: auto;
+  right: 25px;
+}
+
+.catalogWrapper .filter__form .filter__title {
+  font-family: Russo One;
+  font-weight: 400;
+  font-size: var(--phone);
+  text-transform: uppercase;
+  color: var(--button);
+  margin-bottom: -20px;
+}
+
+.catalogWrapper .filter__form .filter__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.catalogWrapper .filter__form .filter__group:before {
+  content: '';
+  position: absolute;
+  top: auto;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #b0bfd2;
+}
+
+.catalogWrapper .filter__form .filter__group .filter__label {
+  font-family: Onest;
+  font-weight: 600;
+  font-size: var(--mainText);
+  color: var(--dark);
+}
+
+.catalogWrapper .filter__form .filter__group .filter__label.toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  align-items: center;
+}
+
+.catalogWrapper .filter__form .filter__group .filter__price {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+.catalogWrapper .filter__form .filter__group .filter__price .filter__input {
+  width: 100%;
+}
+
+.catalogWrapper .filter__form .filter__group .filter__buttons {
+  display: none;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.catalogWrapper .filter__form .filter__group .filter__buttons .filter__btn {
+  font-family: Onest;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: var(--transparent);
+  padding: 8px;
+  background: #f2f5f9;
+  border-radius: 5px;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.catalogWrapper .filter__form .filter__group .filter__buttons .filter__btn:hover,
+.catalogWrapper .filter__form .filter__group .filter__buttons .filter__btn.active {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.catalogWrapper .filter__form .filter__group .arrow {
+  transition: transform 0.3s;
+  font-size: 12px;
+}
+
+.catalogWrapper .filter__form .filter__group .arrow.active {
+  transform: rotate(180deg);
+}
+
+.filter__form .buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filter__form .buttonWrapper .button {
+  width: 100%;
+}
+
+.catalogWrapper .productsGrid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 25px;
+}
+
+.archiveDesc {
+  padding: 25px;
+  background-color: var(--back);
+  border-radius: 20px;
+}
+
+.archiveDesc .subTitle {
+  color: var(--button);
+}
+
+.archiveDesc .content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media (min-width: 1501px) {
+
+  .filterButton,
+  .closeFilter {
+    display: none;
+  }
+}
+
+@media (max-width: 1500px) {
+  .catalogWrapper {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .catalogWrapper .filter__form {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 50%;
+    background: #fff;
+    z-index: 5;
+    transition: 0.75s;
+    width: calc(100vw - 200px) !important;
+    transform: translateX(50%);
+  }
+
+  .catalogWrapper .filter__form.disable {
+    transform: translateX(calc(-100% - 100px));
+  }
+
+  .filterButton {
+    width: 33.333%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .catalogWrapper .filter__form {
+    width: calc(100vw - 100px) !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .catalogWrapper .filter__form {
+    width: calc(100vw - 50px) !important;
+  }
+
+  .catalogWrapper {
+    align-items: center;
+  }
+
+  .catalogWrapper .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .catalogWrapper .filter__form {
+    width: calc(100vw - 25px) !important;
+  }
+
+  .filterButton {
+    width: 100%;
+  }
+
+  .catalogWrapper .productsGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .catalogWrapper .filter__form {
+    padding: 25px 10px;
+  }
+
+  .archiveDesc {
+    padding: 25px 10px;
+  }
+}

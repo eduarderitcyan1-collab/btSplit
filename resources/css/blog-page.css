@@ -1,0 +1,86 @@
+.blogBanner .blogPhoto {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.blogBanner .blogContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 25px;
+  background-color: var(--back);
+  border-radius: 20px;
+}
+
+.moreBlogs .subTitle {
+  text-align: center;
+}
+
+.moreBlogs .blogContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.moreBlogs .blogContainer .blogItem {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 20px;
+  background: var(--white);
+  gap: 25px;
+}
+
+.moreBlogs .blogContainer .blogItem .blogPhoto {
+  width: 100%;
+  height: 325px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.moreBlogs .blogContainer .blogItem .blogContent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.moreBlogs .blogContainer .blogItem .blogContent .blogTitle {
+  font-family: Onest;
+  font-size: var(--phone);
+  font-weight: 700;
+  color: var(--dark);
+  transition: 0.5s;
+}
+
+@media (max-width: 1200px) {
+  .moreBlogs .titleWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .moreBlogs .blogContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .moreBlogs .blogContainer .blogItem .blogContent .blogTitle,
+  .moreBlogs .blogContainer .blogItem .blogContent .mainText {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .blogBanner .blogPhoto {
+    height: 300px;
+  }
+
+  .blogBanner .blogContent {
+    padding: 25px 10px;
+  }
+
+  .moreBlogs .blogContainer .blogItem .blogPhoto {
+    height: 250px;
+  }
+}

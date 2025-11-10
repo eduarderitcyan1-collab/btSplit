@@ -1,0 +1,73 @@
+.blog .titleWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.blog .titleWrapper .button {
+  width: 325px;
+}
+
+.blog .blogContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.blog .blogContainer .blogItem {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 20px;
+  background: var(--white);
+  gap: 25px;
+}
+
+.blog .blogContainer .blogItem .blogPhoto {
+  width: 100%;
+  height: 325px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.blog .blogContainer .blogItem .blogContent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.blog .blogContainer .blogItem .blogContent .blogTitle {
+  font-family: Onest;
+  font-size: var(--phone);
+  font-weight: 700;
+  color: var(--dark);
+  transition: 0.5s;
+}
+
+@media (max-width: 1200px) {
+  .blog .titleWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .blog .blogContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .blog .blogContainer .blogItem .blogContent .blogTitle,
+  .blog .blogContainer .blogItem .blogContent .mainText {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .blog .titleWrapper .button {
+    width: 100%;
+  }
+
+  .blog .blogContainer .blogItem .blogPhoto {
+    height: 250px;
+  }
+}

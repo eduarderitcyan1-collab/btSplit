@@ -1,0 +1,291 @@
+.productBanner {
+    display: grid !important;
+    grid-template-columns: 40% 1fr;
+    align-items: start;
+    gap: 25px;
+}
+
+.productBanner .productGallery {
+    user-select: none;
+    line-height: 0;
+    position: relative;
+}
+
+.productBanner .productGallery .swiper-slide {
+    display: flex;
+}
+
+.productBanner .productGallery .glightbox {
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.productBanner .productGallery .main-slider {
+    border-radius: 20px;
+}
+
+.productBanner .productGallery .main-slider img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.productBanner .productGallery .thumbs-slider img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.productBanner .productGallery .thumbs-slider {
+    margin-top: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.productBanner .productGallery .thumbs-slider .swiper-wrapper .swiper-slide {
+    opacity: 0.6;
+    cursor: pointer;
+    border: solid 2px #CCDEFF !important;
+    border-radius: 23px;
+    transition: opacity 0.3s, border 0.3s;
+}
+
+.productBanner .productGallery .thumbs-slider .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
+    opacity: 1 !important;
+    border: solid 2px var(--blue) !important;
+}
+
+.productBanner .productGallery .swiper-button-next,
+.productBanner .productGallery .swiper-button-prev {
+    top: auto;
+    bottom: 12%;
+    transform: translateY(50%);
+    color: var(--blue);
+    transition: 0.3s;
+}
+
+.productBanner .productGallery .swiper-button-next:after,
+.productBanner .productGallery .swiper-button-prev:after {
+    font-size: var(--mainSubTitle);
+}
+
+/*  */
+
+.productBanner .productContent {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.productBanner .shortDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    background-color: var(--back);
+    border-radius: 20px;
+}
+
+.productBanner .productVariation,
+.productBanner .productChar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.productBanner .productVariation .variationTitle,
+.productBanner .productChar .charTitle {
+    font-family: Russo One;
+    font-weight: 400;
+    font-size: var(--mainSubTitle);
+    color: var(--button);
+    text-transform: uppercase;
+}
+
+.productBanner .productVariation .variationWrapper,
+.productBanner .productVariation .variationItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.productBanner .productVariation .variationWrapper .variationItem {
+    gap: 10px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: solid 1px #B0BFD2;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.productBanner .productVariation .variationWrapper .variationItem .variationIcon {
+    line-height: 0;
+}
+
+.productBanner .productVariation .variationWrapper .variationItem .variationValue {
+    font-family: Onest;
+    font-weight: 500;
+    font-size: var(--mainText);
+    color: #616368;
+    transition: 0.3s;
+}
+
+.productBanner .productVariation .variationWrapper .variationItem .variationIcon svg path {
+    fill: #616368;
+    transition: 0.1s;
+}
+
+.productBanner .productVariation .variationWrapper .variationItem:hover,
+.productBanner .productVariation .variationWrapper .variationItem.active,
+.productBanner .productVariation .variationWrapper .variationItem:hover .variationValue,
+.productBanner .productVariation .variationWrapper .variationItem.active .variationValue,
+.productBanner .productVariation .variationWrapper .variationItem:hover .variationIcon svg path,
+.productBanner .productVariation .variationWrapper .variationItem.active .variationIcon svg path {
+    border-color: var(--blue);
+    color: var(--blue);
+    fill: var(--blue);
+}
+
+.productBanner .productChar .charWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.productBanner .productChar .charWrapper .charItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.productBanner .productChar .charWrapper .charName {
+    font-family: Onest;
+    font-weight: 500;
+    font-size: var(--mainText);
+    color: #616368;
+}
+
+.productBanner .productChar .charWrapper .charSep {
+    flex-grow: 1;
+    background-color: #CCDEFF;
+    height: 1px;
+}
+
+.productBanner .productChar .charWrapper .charVal {
+    font-family: Onest;
+    font-weight: 700;
+    font-size: var(--mainText);
+    color: var(--dark);
+}
+
+.productBanner .productPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.productBanner .productPrice .priceWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.productBanner .productPrice .priceWrapper .salePrice {
+    font-size: var(--mainSubTitle);
+}
+
+@media (max-width: 1200px) {
+    .productBanner {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .productBanner .productGallery {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .productBanner .productGallery .thumbs-slider {
+        width: 85% !important;
+    }
+
+    .productBanner .productGallery .thumbs-slider img {
+        height: 125px;
+    }
+
+    .productBanner .productGallery .swiper-button-next,
+    .productBanner .productGallery .swiper-button-prev {
+        bottom: 15%;
+    }
+
+    .productBanner .productVariation .variationTitle,
+    .productBanner .productChar .charTitle {
+        text-align: center;
+    }
+
+    .productBanner .productVariation .variationWrapper {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .productBanner .productGallery .thumbs-slider img {
+        height: 50px;
+    }
+
+    .productBanner .productGallery .swiper-button-next,
+    .productBanner .productGallery .swiper-button-prev {
+        bottom: 7%;
+    }
+
+    .productBanner .productGallery .swiper-button-prev {
+        left: 0;
+    }
+
+    .productBanner .productGallery .swiper-button-next {
+        right: 0;
+    }
+
+    .productBanner .productGallery .thumbs-slider {
+        width: 90% !important;
+    }
+
+    .productBanner .shortDesc {
+        padding: 25px 10px;
+    }
+
+    .productBanner .productPrice {
+        gap: 15px;
+    }
+
+    .productBanner .productPrice .priceWrapper {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .productBanner .productPrice .priceWrapper .salePrice {
+        order: -1;
+    }
+
+    .productBanner .productPrice {
+        flex-direction: column;
+    }
+}

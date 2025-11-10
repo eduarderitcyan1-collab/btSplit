@@ -1,0 +1,81 @@
+.service .titleWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.service .titleWrapper .button {
+  width: 325px;
+}
+
+.service .serviceContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service .serviceContainer .serviceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.service .serviceContainer .serviceItem .servicePhoto {
+  width: 100%;
+  height: 325px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.service .serviceContainer .serviceItem .serviceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  background: var(--white);
+  border-radius: 20px;
+}
+
+.service .serviceContainer .serviceItem .serviceContent .serviceTitle {
+  font-family: Onest;
+  font-size: var(--phone);
+  font-weight: 700;
+  color: var(--dark);
+  transition: 0.5s;
+}
+
+.service .serviceContainer .serviceItem:hover .serviceContent .serviceTitle {
+  color: var(--blue);
+}
+
+@media (max-width: 1200px) {
+  .service .titleWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service .serviceContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .service .serviceContainer .serviceItem .serviceContent .serviceTitle,
+  .service .serviceContainer .serviceItem .serviceContent .mainText {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .service .titleWrapper .button {
+    width: 100%;
+  }
+
+  .service .serviceContainer .serviceItem .servicePhoto {
+    height: 250px;
+  }
+
+  .service .serviceContainer .serviceItem .serviceContent {
+    padding: 25px 10px;
+  }
+}

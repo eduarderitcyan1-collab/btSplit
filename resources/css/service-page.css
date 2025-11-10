@@ -1,0 +1,182 @@
+.serviceBanner .servicePhoto,
+.stages .stagesPhoto {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.serviceBanner .serviceContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 25px;
+  background-color: var(--back);
+  border-radius: 20px;
+}
+
+.servicePrice .subTitle {
+  color: var(--button);
+}
+
+.servicePrice .table {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 12px 25px;
+  border: 1px solid #bebebe;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.servicePrice .table .tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  gap: 25px;
+  position: relative;
+}
+
+.servicePrice .table .tableHeader:before {
+  content: '';
+  position: absolute;
+  top: auto;
+  bottom: -12.5px;
+  left: auto;
+  right: 50%;
+  width: 200%;
+  height: 1px;
+  background-color: #bebebe;
+  transform: translateX(50%);
+}
+
+.servicePrice .table .tableHeader .tableHeaderWrapper {
+  font-family: Onest;
+  font-weight: 700;
+  font-size: var(--phone);
+  color: var(--dark);
+}
+
+.servicePrice .table .tableHeader .tableHeaderWrapper:last-child {
+  text-align: right;
+}
+
+.servicePrice .table .tableBody {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.servicePrice .table .tableBody .tableRow {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  gap: 25px;
+  position: relative;
+}
+
+.servicePrice .table .tableBody .tableRow:not(:last-child):before {
+  content: '';
+  position: absolute;
+  top: auto;
+  bottom: -12.5px;
+  left: auto;
+  right: 50%;
+  width: 200%;
+  height: 1px;
+  background-color: #bebebe;
+  transform: translateX(50%);
+}
+
+.servicePrice .table .tableBody .tableRow .tableRowTitle,
+.servicePrice .table .tableBody .tableRow .tableRowPrice {
+  font-family: Onest;
+  font-weight: 500;
+  font-size: var(--phone);
+}
+
+.servicePrice .table .tableBody .tableRow .tableRowTitle {
+  color: #616368;
+}
+
+.servicePrice .table .tableBody .tableRow .tableRowPrice {
+  color: var(--dark);
+  text-align: right;
+}
+
+.stages .subTitle {
+  color: var(--button);
+}
+
+.stages .stageContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 25px;
+  background-color: var(--back);
+  border-radius: 20px;
+}
+
+.portfolio .porfolioWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.portfolio .porfolioWrapper .porfolioPhoto {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media (max-width: 1200px) {
+  .portfolio .porfolioWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .serviceBanner .servicePhoto,
+  .stages .stagesPhoto {
+    height: 300px;
+  }
+
+  .serviceBanner .serviceContent,
+  .stages .stageContent {
+    padding: 25px 10px;
+  }
+
+  .servicePrice .table .tableBody .tableRow .tableRowPrice,
+  .servicePrice .table .tableBody .tableRow .tableRowTitle {
+    text-align: center;
+  }
+
+  .servicePrice .table {
+    padding: 12px 10px;
+  }
+
+  .servicePrice .table .tableHeader {
+    display: none;
+  }
+
+  .servicePrice .table .tableBody {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .servicePrice .table .tableBody .tableRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio .porfolioWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .portfolio .porfolioWrapper .porfolioPhoto {
+    height: 100%;
+  }
+}
