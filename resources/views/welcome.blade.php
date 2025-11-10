@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Russo+One&display=swap"
         rel="stylesheet">
     <title>БТ Сплит</title>
-    @vite(['resources/css/app.css', 'resources/css/header.css', 'resources/css/index.css', 'resources/css/footer.css', 'resources/js/app.js', 'resources/js/burger.js', 'resources/js/mask.js', 'resources/js/accordion.js', 'resources/js/yearFooter.js'])
+    @vite(['resources/css/app.css', 'resources/css/header.css', 'resources/css/footer.css', 'resources/css/index.css', 'resources/css/about.css', 'resources/css/blog-main.css', 'resources/css/blog-page.css', 'resources/css/cart.css', 'resources/css/product-archive.css', 'resources/css/service-main.css', 'resources/css/service-page.css', 'resources/css/single-product.css', 'resources/css/sravnenie.css', 'resources/css/wishlist.css', 'resources/js/app.js', 'resources/js/burger.js', 'resources/js/mask.js', 'resources/js/accordion.js', 'resources/js/yearFooter.js', 'resources/js/about.js', 'resources/js/cart.js', 'resources/js/addToWish-active.js', 'resources/js/filterToggle.js'])
 </head>
 
 <body>
@@ -30,8 +30,8 @@
                         ведущих мировых производителей
                     </p>
                     <div class="buttonWrapper">
-                        <a href="#" class="button">Каталог</a>
-                        <a href="#" class="button">Услуги</a>
+                        <a href="{{ route('catalog') }}" class="button">Каталог</a>
+                        <a href="{{ route('service') }}" class="button">Услуги</a>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
         <div class="container sale">
             <div class="titleWrapper">
                 <h2 class="subTitle">Сплит-системы по категориям</h2>
-                <a href="#" class="button">Перейти в каталог</a>
+                <a href="{{ route('catalog') }}" class="button">Перейти в каталог</a>
             </div>
             <div class="category">
                 <a href="#" class="categoryItem">
@@ -174,7 +174,7 @@
         <div class="container service background">
             <div class="titleWrapper">
                 <h2 class="subTitle">Услуги</h2>
-                <a href="#" class="button">Перейти</a>
+                <a href="{{ route('service') }}" class="button">Перейти</a>
             </div>
             <div class="serviceContainer">
                 <div class="serviceItem">
@@ -186,7 +186,7 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="#" class="button">К услуге</a>
+                        <a href="{{ route('servicePage') }}" class="button">К услуге</a>
                     </div>
                 </div>
                 <div class="serviceItem">
@@ -198,7 +198,7 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="#" class="button">К услуге</a>
+                        <a href="{{ route('servicePage') }}" class="button">К услуге</a>
                     </div>
                 </div>
                 <div class="serviceItem">
@@ -210,7 +210,7 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="#" class="button">К услуге</a>
+                        <a href="{{ route('servicePage') }}" class="button">К услуге</a>
                     </div>
                 </div>
             </div>
@@ -316,7 +316,7 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="#" class="button">Читать далее</a>
+                        <a href="{{ route('blogPage') }}" class="button">Читать далее</a>
                     </div>
                 </div>
                 <div class="blogItem">
@@ -328,7 +328,7 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="#" class="button">Читать далее</a>
+                        <a href="{{ route('blogPage') }}" class="button">Читать далее</a>
                     </div>
                 </div>
                 <div class="blogItem">
@@ -340,7 +340,7 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="#" class="button">Читать далее</a>
+                        <a href="{{ route('blogPage') }}" class="button">Читать далее</a>
                     </div>
                 </div>
             </div>

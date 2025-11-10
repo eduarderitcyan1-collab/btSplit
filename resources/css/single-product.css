@@ -61,7 +61,9 @@
 }
 
 .productBanner .productGallery .swiper-button-next,
-.productBanner .productGallery .swiper-button-prev {
+.productBanner .productGallery .swiper-button-prev,
+.carousel .swiper-button-next,
+.carousel .swiper-button-prev {
     top: auto;
     bottom: 12%;
     transform: translateY(50%);
@@ -69,12 +71,13 @@
     transition: 0.3s;
 }
 
-.productBanner .productGallery .swiper-button-next:after,
-.productBanner .productGallery .swiper-button-prev:after {
-    font-size: var(--mainSubTitle);
+.productBanner .productGallery .swiper-button-next svg,
+.productBanner .productGallery .swiper-button-prev svg,
+.carousel .swiper-button-next svg,
+.carousel .swiper-button-prev svg {
+    width: 35px;
+    height: 35px;
 }
-
-/*  */
 
 .productBanner .productContent {
     display: flex;
@@ -82,7 +85,8 @@
     gap: 25px;
 }
 
-.productBanner .shortDesc {
+.productBanner .shortDesc,
+.description .productDescription {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -99,7 +103,7 @@
 }
 
 .productBanner .productVariation .variationTitle,
-.productBanner .productChar .charTitle {
+.productChar .charTitle {
     font-family: Russo One;
     font-weight: 400;
     font-size: var(--mainSubTitle);
@@ -156,13 +160,13 @@
     fill: var(--blue);
 }
 
-.productBanner .productChar .charWrapper {
+.productChar .charWrapper {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.productBanner .productChar .charWrapper .charItem {
+.productChar .charWrapper .charItem {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -170,20 +174,20 @@
     gap: 15px;
 }
 
-.productBanner .productChar .charWrapper .charName {
+.productChar .charWrapper .charName {
     font-family: Onest;
     font-weight: 500;
     font-size: var(--mainText);
     color: #616368;
 }
 
-.productBanner .productChar .charWrapper .charSep {
+.productChar .charWrapper .charSep {
     flex-grow: 1;
     background-color: #CCDEFF;
     height: 1px;
 }
 
-.productBanner .productChar .charWrapper .charVal {
+.productChar .charWrapper .charVal {
     font-family: Onest;
     font-weight: 700;
     font-size: var(--mainText);
@@ -208,6 +212,28 @@
 
 .productBanner .productPrice .priceWrapper .salePrice {
     font-size: var(--mainSubTitle);
+}
+
+.productChar .productCharGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.carousel .titleWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.carousel .titleWrapper .button {
+    width: 325px;
+}
+
+.carousel .swiper {
+    margin: 0;
 }
 
 @media (max-width: 1200px) {
@@ -243,6 +269,11 @@
     .productBanner .productVariation .variationWrapper {
         justify-content: center;
     }
+
+    .carousel .titleWrapper {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media (max-width: 700px) {
@@ -267,7 +298,8 @@
         width: 90% !important;
     }
 
-    .productBanner .shortDesc {
+    .productBanner .shortDesc,
+    .description .productDescription {
         padding: 25px 10px;
     }
 
@@ -287,5 +319,9 @@
 
     .productBanner .productPrice {
         flex-direction: column;
+    }
+
+    .carousel .titleWrapper .button {
+        width: 100%;
     }
 }

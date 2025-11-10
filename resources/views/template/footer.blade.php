@@ -18,11 +18,11 @@
             </div>
             <div class="menu" id="menu">
                 <a href="/" class="menuItem">Главная</a>
-                <a href="/katalog/" class="menuItem">Каталог</a>
-                <a href="/uslugi/" class="menuItem">Услуги</a>
-                <a href="/o-kompanii/" class="menuItem">О компании</a>
-                <a href="/dostavka-i-oplata/" class="menuItem">Доставка и оплата</a>
-                <a href="/blog/" class="menuItem">Блог</a>
+                <a href="{{ route('catalog') }}" class="menuItem">Каталог</a>
+                <a href="{{ route('service') }}" class="menuItem">Услуги</a>
+                <a href="{{ route('about') }}" class="menuItem">О компании</a>
+                <a href="{{ route('dostavka-i-oplata') }}" class="menuItem">Доставка и оплата</a>
+                <a href="{{ route('blog') }}" class="menuItem">Блог</a>
                 <a href="{{ route('contacts') }}" class="menuItem">Контакты</a>
             </div>
             <div class="footerWrapper">

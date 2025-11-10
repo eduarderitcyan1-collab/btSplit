@@ -7,9 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Russo+One&display=swap"
         rel="stylesheet">
-    <!-- Swiper will be bundled via Vite (imported in resources/js/about.js) -->
     <title>О нас</title>
-    @vite(['resources/css/app.css', 'resources/css/header.css', 'resources/css/index.css', 'resources/css/footer.css', 'resources/js/app.js', 'resources/js/burger.js', 'resources/js/mask.js', 'resources/js/accordion.js', 'resources/js/yearFooter.js', 'resources/js/about.js', 'resources/css/about.css'])
+    @vite(['resources/css/app.css', 'resources/css/header.css', 'resources/css/footer.css', 'resources/css/index.css', 'resources/css/about.css', 'resources/css/blog-main.css', 'resources/css/blog-page.css', 'resources/css/cart.css', 'resources/css/product-archive.css', 'resources/css/service-main.css', 'resources/css/service-page.css', 'resources/css/single-product.css', 'resources/css/sravnenie.css', 'resources/css/wishlist.css', 'resources/js/app.js', 'resources/js/burger.js', 'resources/js/mask.js', 'resources/js/accordion.js', 'resources/js/yearFooter.js', 'resources/js/about.js', 'resources/js/cart.js', 'resources/js/addToWish-active.js', 'resources/js/filterToggle.js'])
+
 </head>
 
 <body>
@@ -17,7 +17,8 @@
     <main class="page">
         <div class="container about">
             <h1 class="pageTitle">О компании</h1>
-            <img src="storage/img/d8819ed8eb3da6bee245feb2a2874943f505c07d.webp" class="aboutPhoto" alt="About" />
+            <img src="{{ asset('images/d8819ed8eb3da6bee245feb2a2874943f505c07d.webp') }}" class="aboutPhoto"
+                alt="About" />
             <div class="aboutContent">
                 <p class="mainText">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -56,12 +57,12 @@
         <div class="container portfolio">
             <h2 class="subTitle">Портфолио</h2>
             <div class="porfolioWrapper">
-                <img src="storage\img\image 60.webp" class="porfolioPhoto" alt="Porfolio Item" />
-                <img src="storage\img\image 60.webp" class="porfolioPhoto" alt="Porfolio Item" />
-                <img src="storage\img\image 60.webp" class="porfolioPhoto" alt="Porfolio Item" />
-                <img src="storage\img\image 60.webp" class="porfolioPhoto" alt="Porfolio Item" />
-                <img src="storage\img\image 60.webp" class="porfolioPhoto" alt="Porfolio Item" />
-                <img src="storage\img\image 60.webp" class="porfolioPhoto" alt="Porfolio Item" />
+                <img src="{{ asset('images/image60.webp') }}" class="porfolioPhoto" alt="Porfolio Item" />
+                <img src="{{ asset('images/image60.webp') }}" class="porfolioPhoto" alt="Porfolio Item" />
+                <img src="{{ asset('images/image60.webp') }}" class="porfolioPhoto" alt="Porfolio Item" />
+                <img src="{{ asset('images/image60.webp') }}" class="porfolioPhoto" alt="Porfolio Item" />
+                <img src="{{ asset('images/image60.webp') }}" class="porfolioPhoto" alt="Porfolio Item" />
+                <img src="{{ asset('images/image60.webp') }}" class="porfolioPhoto" alt="Porfolio Item" />
             </div>
         </div>
         <div class="container certificate">
