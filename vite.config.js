@@ -10,6 +10,7 @@ export default defineConfig({
         'resources/css/header.css',
         'resources/css/index.css',
         'resources/css/footer.css',
+        'resources/css/about.css',
         'resources/js/app.js',
         'resources/js/burger.js',
         'resources/js/mask.js',
