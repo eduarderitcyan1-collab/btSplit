@@ -14,6 +14,7 @@ export default defineConfig({
         'resources/js/burger.js',
         'resources/js/mask.js',
         'resources/js/accordion.js',
+        'resources/js/about.js',
         'resources/js/yearFooter.js',
       ],
       refresh: true,

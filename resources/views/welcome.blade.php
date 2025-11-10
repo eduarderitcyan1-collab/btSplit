@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -8,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Russo+One&display=swap"
         rel="stylesheet">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>БТ Сплит</title>
     @vite(['resources/css/app.css', 'resources/css/header.css', 'resources/css/index.css', 'resources/css/footer.css', 'resources/js/app.js', 'resources/js/burger.js', 'resources/js/mask.js', 'resources/js/accordion.js', 'resources/js/yearFooter.js'])
 </head>
 
@@ -42,66 +41,7 @@
         </div>
         <div class="container">
             <h2 class="subTitle">Бренды, с которыми мы работаем</h2>
-            <div class="brands-marquee">
-                <div class="marquee">
-                    <div class="marquee__group">
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                        <a href="#" class="brand"><img
-                                src="{{ asset('images/23baf3797c308c5e18a0ccfa6a088856867fc693.png') }}"
-                                alt="Hitachi" /></a>
-                    </div>
-                </div>
-            </div>
+            @include('template.marquee')
         </div>
         <div class="container sale">
             <div class="titleWrapper">
@@ -275,14 +215,7 @@
                 </div>
             </div>
         </div>
-        <div class="container review">
-            <h2 class="subTitle">Отзывы</h2>
-            <div id="rev" style="width: 560px; height: 800px; overflow: hidden; position: relative">
-                <iframe
-                    style="width: 100%; height: 100%; border: 1px solid #e6e6e6; border-radius: 8px; box-sizing: border-box"
-                    src="https://yandex.ru/maps-reviews-widget/99593333888?comments"></iframe>
-            </div>
-        </div>
+        @include('template.review')
         <div class="container filterForm">
             <h2 class="subTitle">
                 Узнайте, какая модель кондиционера
@@ -367,27 +300,7 @@
                 </div>
             </div>
         </div>
-        <div class="container form">
-            <div class="formWrapper">
-                <h2 class="subTitle">Задать вопрос</h2>
-                <p class="mainText">Укажите Ваши контактные данные, и наш специалист свяжется с вами для консультации
-                </p>
-                <form class="feedback">
-                    <input type="text" name="name" placeholder="Ваше имя" required />
-                    <input type="text" name="phone" placeholder="+7 (___) ___-__-__" required />
-                    <label class="personalData">
-                        <input type="checkbox" required />
-                        <div class="acceptText">
-                            Я согласен на
-                            <a href="/personal-data/" target="_blank">обработку персональных данных</a>
-                        </div>
-                    </label>
-                    <button type="submit" class="button">Отправить</button>
-                </form>
-            </div>
-            <img src="{{ asset('images\06ed71ac3cf7cca61ce3fd49d34ba5b5c612dd80.webp') }}" class="FormPhoto"
-                alt="Conditioner photo" />
-        </div>
+        @include('template.formBlock')
         <div class="container blog background">
             <div class="titleWrapper">
                 <h2 class="subTitle">Полезные статьи</h2>
@@ -459,37 +372,7 @@
                 </p>
             </div>
         </div>
-        <div class="container contacts">
-            <div class="contactsContent">
-                <h2 class="subTitle">Контакты</h2>
-                <p class="mainText">
-                    В нашем ассортименте – более 200 самых разнообразных моделей климатического оборудования от ведущих
-                    мировых производителей
-                </p>
-                <a href="tel:+78005553535" class="phone">+7 (800) 555-35-35</a>
-                <a href="mail:test@mail.ru" class="mail">test@mail.ru</a>
-                <div class="social">
-                    <a href="#" class="socialItem">
-                        <img src="{{ asset('images/svg/vk.svg') }}" />
-                    </a>
-                    <a href="#" class="socialItem">
-                        <img src="{{ asset('images/svg/max.svg') }}" />
-                    </a>
-                </div>
-                <div class="adress">г. Анапа, ул. Улица, 23</div>
-                <div class="rating">
-                    <a href="#" class="ratingItem">
-                        <img src="{{ asset('images/svg/yandex.svg') }}" />
-                    </a>
-                    <a href="#" class="ratingItem">
-                        <img src="{{ asset('images/svg/2gis.svg') }}" />
-                    </a>
-                </div>
-            </div>
-            <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A47c3bf84e9a9b8456b4350ca9f770e0521ba2e58f2e848432f3f9d4aaa4281e6&amp;source=constructor"
-                width="500" height="400" frameborder="0"></iframe>
-        </div>
+        @include('template.contacts')
         <div class="container accordion">
             <h2 class="subTitle">Часто задаваемые вопросы</h2>
             <div class="accordion-item active">

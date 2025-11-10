@@ -23,7 +23,7 @@
                 <a href="/o-kompanii/" class="menuItem">О компании</a>
                 <a href="/dostavka-i-oplata/" class="menuItem">Доставка и оплата</a>
                 <a href="/blog/" class="menuItem">Блог</a>
-                <a href="/kontakty/" class="menuItem">Контакты</a>
+                <a href="{{ route('contacts') }}" class="menuItem">Контакты</a>
             </div>
             <div class="footerWrapper">
                 <a href="tel:+78005553535" class="phone">+7 (800) 555-35-35</a>
