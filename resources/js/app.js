@@ -1,5 +1,5 @@
 import $ from 'jquery'
-
+import 'jquery-mask-plugin'
 // сделать jQuery глобальным для остальных файлов/плагинов
 window.$ = window.jQuery = $
 
