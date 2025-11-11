@@ -53,6 +53,7 @@
   margin-right: auto;
   width: auto;
   height: 50px;
+  width: 150px;
 }
 
 .centerHeader .phone {
@@ -252,8 +253,8 @@
     gap: 10px;
   }
 
-  .centerHeader .logo {
-    height: 20px;
+  .centerHeader .logo img {
+    width: 125px;
   }
 
   .bottomHeader .menu-toggle {
