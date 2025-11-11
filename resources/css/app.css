@@ -114,7 +114,8 @@ a {
 }
 
 input,
-select {
+select,
+textarea {
     flex-grow: 1;
     padding: 10px;
     font-family: Onest;
@@ -125,7 +126,8 @@ select {
 }
 
 input:focus-visible,
-select:focus-visible {
+select:focus-visible,
+textarea:focus-visible {
     outline: none;
 }
 
@@ -190,7 +192,7 @@ ol {
     left: -75px;
     width: 350px;
     height: 450px;
-    background-image: url('../storage/svg/Group 4118.svg');
+    background-image: url('/public/images/svg/Group4118.svg');
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
@@ -203,7 +205,7 @@ ol {
     right: -75px;
     width: 350px;
     height: 450px;
-    background-image: url('../storage/svg/Group 4118.svg');
+    background-image: url('/public/images/svg/Group4118.svg');
     background-size: contain;
     background-repeat: no-repeat;
     transform: rotate(-180deg);

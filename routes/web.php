@@ -53,3 +53,7 @@ Route::get('/catalog', function () {
 Route::get('/single-product', function () {
     return view('single-product');
 })->name('single-product');
+
+Route::get('/checkout', function () {
+    return view('checkout');
+})->name('checkout');

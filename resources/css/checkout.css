@@ -1,0 +1,196 @@
+.order .checkout {
+    display: grid !important;
+    grid-template-columns: 1fr 25%;
+    align-items: start;
+    gap: 25px;
+}
+
+.order .checkout .personalInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: solid 1px #B0BFD2;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.order .checkout .personalInfo .infoWrapper:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.order .checkout .personalInfo .infoWrapper:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.order .checkout .personalInfo .option {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.order .checkout .personalInfo .option .optionBlock,
+.order .checkout .personalInfo .agreements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order .checkout .personalInfo .option .optionBlock .optionTitle {
+    color: var(--button);
+}
+
+.order .checkout .personalInfo .option .optionBlock input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #C1C3ED;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 6px;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+}
+
+.order .checkout .personalInfo .option .optionBlock input[type="radio"]:checked {
+    background-color: #0073FA;
+    border: 1px solid #0073FA;
+}
+
+.order .checkout .personalInfo .option .optionBlock input[type="radio"]:checked:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.order .checkout .personalInfo .agreements input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #C1C3ED;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 6px;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+}
+
+.order .checkout .personalInfo .agreements input[type="checkbox"]:checked {
+    background-color: #0073FA;
+    border: 1px solid #0073FA;
+}
+
+.order .checkout .personalInfo .agreements input[type="checkbox"]:checked:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.order .checkout .orderDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+    border: 1px solid #B0BFD2;
+    border-radius: 20px;
+}
+
+.order .checkout .orderDetails .subTitle {
+    color: var(--button);
+}
+
+.order .checkout .orderDetails .detailsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+
+.order .checkout .orderDetails .detailsItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    font-family: Onest;
+    font-weight: 600;
+    font-size: var(--mainText);
+    position: relative;
+    color: var(--dark);
+}
+
+.order .checkout .orderDetails .detailsItem:last-child .delailName {
+    font-family: Onest;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: var(--phone);
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.order .checkout .orderDetails .detailsItem:last-child .totalPrice__order {
+    font-family: Onest;
+    font-weight: 800;
+    font-size: var(--phone);
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.order .checkout .orderDetails .detailsItem:not(:last-child):before {
+    content: "";
+    position: absolute;
+    top: auto;
+    bottom: -12px;
+    left: auto;
+    right: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #B0BFD2;
+    transform: translateX(50%);
+}
+
+@media(max-width: 1440px) {
+    .order .checkout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 1200px) {
+    .order .checkout .personalInfo .infoWrapper:nth-child(1) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .order .checkout .personalInfo .infoWrapper:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .order .checkout .personalInfo .option .optionBlock .optionTitle {
+        text-align: left;
+    }
+}
+
+@media(max-width: 700px) {
+    .order .checkout .personalInfo {
+        padding: 25px 10px;
+    }
+
+    .order .checkout .personalInfo .option {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .order .checkout .orderDetails {
+        padding: 25px 10px;
+    }
+}

@@ -20,6 +20,7 @@ export default defineConfig({
         'resources/css/single-product.css',
         'resources/css/sravnenie.css',
         'resources/css/wishlist.css',
+        'resources/css/checkout.css',
         'resources/js/app.js',
         'resources/js/burger.js',
         'resources/js/mask.js',

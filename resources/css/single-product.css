@@ -321,6 +321,11 @@
         flex-direction: column;
     }
 
+    .productChar .productCharGrid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+
     .carousel .titleWrapper .button {
         width: 100%;
     }

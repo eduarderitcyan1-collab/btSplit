@@ -20,7 +20,7 @@
   left: -75px;
   width: 350px;
   height: 450px;
-  background-image: url('../storage/svg/Group 4118.svg');
+  background-image: url('/public/images/svg/Group4118.svg');
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
@@ -33,7 +33,7 @@
   right: -75px;
   width: 350px;
   height: 450px;
-  background-image: url('../storage/svg/Group 4118.svg');
+  background-image: url('/public/images/svg/Group4118.svg');
   background-size: contain;
   background-repeat: no-repeat;
   transform: rotate(-180deg);
