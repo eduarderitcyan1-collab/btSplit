@@ -240,7 +240,7 @@
     flex-direction: row !important;
     justify-content: space-between;
     flex-wrap: nowrap !important;
-    gap: 0px;
+    gap: 10px;
   }
 
   .topHeader,
@@ -250,11 +250,16 @@
 
   .centerHeader {
     flex-wrap: nowrap !important;
-    gap: 10px;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .centerHeader .logo {
+    width: auto;
   }
 
   .centerHeader .logo img {
-    width: 125px;
+    width: 100px;
   }
 
   .bottomHeader .menu-toggle {
