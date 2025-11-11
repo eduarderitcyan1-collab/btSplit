@@ -411,7 +411,7 @@ ol {
     background: #fff;
     position: relative;
     width: 500%;
-    transform: translateX(-4%);
+    transform: translateX(-8%);
 }
 
 .marquee {
