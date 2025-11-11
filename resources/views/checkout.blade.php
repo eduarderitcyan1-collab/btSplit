@@ -20,16 +20,29 @@
             <form class="checkout">
                 <div class="personalInfo">
                     <div class="infoWrapper">
-                        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-                        <input type="text" id="sername" name="sername" placeholder="Ваша фамилия" required>
+                        <input type="text" id="userName" name="name" placeholder="Ваше имя" required
+                            autocomplete="name" minlength="2" maxlength="50" pattern="[а-яёА-ЯЁa-zA-Z\s\-]+"
+                            title="Введите ваше имя (только буквы, пробелы и дефисы)">
+                        <input type="text" id="sername" name="name" placeholder="Ваша фамилия" required
+                            autocomplete="name" minlength="2" maxlength="50" pattern="[а-яёА-ЯЁa-zA-Z\s\-]+"
+                            title="Введите вашу фамилию (только буквы, пробелы и дефисы)">
                         <input type="email" id="email" name="email" placeholder="Электронная почта" required>
-                        <input type="text" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        <input type="text" class="form-control recording-input" id="userPhone" name="phone"
+                            placeholder="Номер телефона" required autocomplete="tel" inputmode="numeric"
+                            pattern="[0-9\s\(\)\-\+]*" minlength="18" maxlength="18"
+                            title="Введите номер телефона в формате +7 (XXX) XXX-XX-XX">
                     </div>
                     <div class="infoWrapper">
-                        <input type="text" id="city" name="city" placeholder="Ваш город" required>
-                        <input type="text" id="street" name="street" placeholder="Ваша улица" required>
-                        <input type="text" id="house" name="house" placeholder="Дом" required>
-                        <input type="text" id="flat" name="flat" placeholder="Квартира" required>
+                        <input type="text" id="city" name="city" placeholder="Ваш город" required
+                            autocomplete="city" pattern="[а-яёА-ЯЁa-zA-Z\s\-]+"
+                            title="Введите ваш город (только буквы, пробелы и дефисы)">
+                        <input type="text" id="street" name="street" placeholder="Ваша улица" required
+                            autocomplete="street" pattern="[а-яёА-ЯЁa-zA-Z\s\-]+"
+                            title="Введите вашу улицу (только буквы, пробелы и дефисы)">
+                        <input type="text" id="house" name="house" placeholder="Дом" required
+                            inputmode="numeric" pattern="[0-9\s\(\)\-\+]*" title="Введите ваш номер дома">
+                        <input type="text" id="flat" name="flat" placeholder="Квартира" required
+                            inputmode="numeric" pattern="[0-9\s\(\)\-\+]*" title="Введите ваш номер квартиры">
                     </div>
                     <textarea id="note" name="note" rows="5" cols="33" placeholder="Комментарий к заказу"></textarea>
                     <div class="option">

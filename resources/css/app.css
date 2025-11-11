@@ -330,12 +330,16 @@ ol {
 }
 
 .productItem .buttonWrapper .addToWish,
-.productBanner .buttonWrapper .addToWish {
+.productBanner .buttonWrapper .addToWish,
+.productBanner .buttonWrapper .addToComparison {
+    display: flex;
     border-radius: 15px;
     padding: 15px;
     border: 1px solid #b0bfd2;
     transition: 0.5s;
 }
+
+
 
 .productItem .buttonWrapper .addToWish svg path,
 .productBanner .buttonWrapper .addToWish svg path {
@@ -407,58 +411,45 @@ ol {
     background: #fff;
     position: relative;
     width: 500%;
-    transform: translateX(-10%);
+    transform: translateX(-4%);
 }
 
 .marquee {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
     display: flex;
-    flex-direction: row;
+    overflow: hidden;
     gap: 25px;
 }
 
 .marquee__group {
-    width: 100%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 25px;
+    animation: marquee-scroll 50s linear infinite;
     white-space: nowrap;
-    animation: marquee-scroll 100s linear infinite;
-    will-change: transform;
-    position: relative;
 }
 
-.marquee__group:hover,
-.marquee__group:focus {
+.marquee__group:hover {
     animation-play-state: paused;
-    outline: none;
 }
 
 .brand {
     padding: 15px;
     border: 1px solid #b0bfd2;
     border-radius: 20px;
+    flex-shrink: 0;
 }
 
 .brand img {
     height: 60px;
-    width: auto;
-    transition: filter 0.3s ease;
-}
-
-.brand:hover img {
-    filter: grayscale(0%);
 }
 
 @keyframes marquee-scroll {
-    0% {
+    from {
         transform: translateX(0);
     }
 
-    100% {
-        transform: translateX(-100%);
+    to {
+        transform: translateX(-50%);
     }
 }
 

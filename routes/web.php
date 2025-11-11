@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/contacts', function () {
     return view('contacts');
@@ -61,3 +61,7 @@ Route::get('/checkout', function () {
 Route::get('/thanks', function () {
     return view('thanks');
 })->name('thanks');
+
+Route::get('/dev', function () {
+    return view('dev');
+})->name('dev');

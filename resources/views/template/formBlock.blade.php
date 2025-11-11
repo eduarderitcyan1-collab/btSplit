@@ -15,7 +15,9 @@
             <input type="text" class="form-control recording-input" id="userName" name="name"
                 placeholder="Ваше имя" required autocomplete="name" minlength="2" maxlength="50"
                 pattern="[а-яёА-ЯЁa-zA-Z\s\-]+" title="Введите ваше имя (только буквы, пробелы и дефисы)">
-            <input type="text" name="phone" placeholder="+7 (___) ___-__-__" required />
+            <input type="text" class="form-control recording-input" id="userPhone" name="phone"
+                placeholder="Номер телефона" required autocomplete="tel" inputmode="numeric" pattern="[0-9\s\(\)\-\+]*"
+                minlength="18" maxlength="18" title="Введите номер телефона в формате +7 (XXX) XXX-XX-XX">
             <label class="personalData">
                 <input type="checkbox" required />
                 <div class="acceptText">

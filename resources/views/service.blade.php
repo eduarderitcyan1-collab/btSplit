@@ -19,8 +19,8 @@
         <div class="container service background">
             <h1 class="pageTitle">Услуги</h1>
             <div class="serviceContainer">
-                <div class="serviceItem">
-                    <img src="{{ asset('images/image60.webp') }}" class="servicePhoto" alt="Монтаж кондиционеров" />
+                <a href="{{ route('servicePage') }}" class="serviceItem">
+                    <img src="{{ asset('images\image60.webp') }}" class="servicePhoto" alt="Монтаж кондиционеров" />
                     <div class="serviceContent">
                         <div class="serviceTitle">Монтаж кондиционеров</div>
                         <p class="mainText bal">
@@ -28,11 +28,11 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="{{ route('servicePage') }}" class="button">К услуге</a>
+                        <div class="button">К услуге</div>
                     </div>
-                </div>
-                <div class="serviceItem">
-                    <img src="{{ asset('images/image60.webp') }}" class="servicePhoto" alt="Монтаж кондиционеров" />
+                </a>
+                <a href="{{ route('servicePage') }}" class="serviceItem">
+                    <img src="{{ asset('images\image60.webp') }}" class="servicePhoto" alt="Монтаж кондиционеров" />
                     <div class="serviceContent">
                         <div class="serviceTitle">Монтаж кондиционеров</div>
                         <p class="mainText bal">
@@ -40,11 +40,11 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="{{ route('servicePage') }}" class="button">К услуге</a>
+                        <div class="button">К услуге</div>
                     </div>
-                </div>
-                <div class="serviceItem">
-                    <img src="{{ asset('images/image60.webp') }}" class="servicePhoto" alt="Монтаж кондиционеров" />
+                </a>
+                <a href="{{ route('servicePage') }}" class="serviceItem">
+                    <img src="{{ asset('images\image60.webp') }}" class="servicePhoto" alt="Монтаж кондиционеров" />
                     <div class="serviceContent">
                         <div class="serviceTitle">Монтаж кондиционеров</div>
                         <p class="mainText bal">
@@ -52,9 +52,9 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="{{ route('servicePage') }}" class="button">К услуге</a>
+                        <div class="button">К услуге</div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         @include('template.formBlock')

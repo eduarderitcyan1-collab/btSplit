@@ -1,7 +1,6 @@
 .productBanner {
     display: grid !important;
     grid-template-columns: 40% 1fr;
-    align-items: start;
     gap: 25px;
 }
 
@@ -200,6 +199,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 25px;
+    margin-top: auto;
 }
 
 .productBanner .productPrice .priceWrapper {

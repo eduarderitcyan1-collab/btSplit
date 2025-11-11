@@ -17,13 +17,29 @@
                 <div class="button" id="bid">Задать вопрос</div>
             </div>
             <div class="menu" id="menu">
-                <a href="/" class="menuItem">Главная</a>
-                <a href="{{ route('catalog') }}" class="menuItem">Каталог</a>
-                <a href="{{ route('service') }}" class="menuItem">Услуги</a>
-                <a href="{{ route('about') }}" class="menuItem">О компании</a>
-                <a href="{{ route('dostavka-i-oplata') }}" class="menuItem">Доставка и оплата</a>
-                <a href="{{ route('blog') }}" class="menuItem">Блог</a>
-                <a href="{{ route('contacts') }}" class="menuItem">Контакты</a>
+                <a href="/" class="menuItem {{ request()->routeIs('welcome') ? 'active' : '' }}">
+                    Главная
+                </a>
+                <a href="{{ route('catalog') }}" class="menuItem {{ request()->routeIs('catalog') ? 'active' : '' }}">
+                    Каталог
+                </a>
+                <a href="{{ route('service') }}" class="menuItem {{ request()->routeIs('service') ? 'active' : '' }}">
+                    Услуги
+                </a>
+                <a href="{{ route('about') }}" class="menuItem {{ request()->routeIs('about') ? 'active' : '' }}">
+                    О компании
+                </a>
+                <a href="{{ route('dostavka-i-oplata') }}"
+                    class="menuItem {{ request()->routeIs('dostavka-i-oplata') ? 'active' : '' }}">
+                    Доставка и оплата
+                </a>
+                <a href="{{ route('blog') }}" class="menuItem {{ request()->routeIs('blog') ? 'active' : '' }}">
+                    Блог
+                </a>
+                <a href="{{ route('contacts') }}"
+                    class="menuItem {{ request()->routeIs('contacts') ? 'active' : '' }}">
+                    Контакты
+                </a>
             </div>
             <div class="footerWrapper">
                 <a href="tel:+78005553535" class="phone">+7 (800) 555-35-35</a>

@@ -178,7 +178,7 @@
                 <a href="{{ route('service') }}" class="button">Перейти</a>
             </div>
             <div class="serviceContainer">
-                <div class="serviceItem">
+                <a href="{{ route('servicePage') }}" class="serviceItem">
                     <img src="{{ asset('images\image60.webp') }}" class="servicePhoto" alt="Монтаж кондиционеров" />
                     <div class="serviceContent">
                         <div class="serviceTitle">Монтаж кондиционеров</div>
@@ -187,10 +187,10 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="{{ route('servicePage') }}" class="button">К услуге</a>
+                        <div class="button">К услуге</div>
                     </div>
-                </div>
-                <div class="serviceItem">
+                </a>
+                <a href="{{ route('servicePage') }}" class="serviceItem">
                     <img src="{{ asset('images\image60.webp') }}" class="servicePhoto" alt="Монтаж кондиционеров" />
                     <div class="serviceContent">
                         <div class="serviceTitle">Монтаж кондиционеров</div>
@@ -199,10 +199,10 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="{{ route('servicePage') }}" class="button">К услуге</a>
+                        <div class="button">К услуге</div>
                     </div>
-                </div>
-                <div class="serviceItem">
+                </a>
+                <a href="{{ route('servicePage') }}" class="serviceItem">
                     <img src="{{ asset('images\image60.webp') }}" class="servicePhoto" alt="Монтаж кондиционеров" />
                     <div class="serviceContent">
                         <div class="serviceTitle">Монтаж кондиционеров</div>
@@ -211,9 +211,9 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="{{ route('servicePage') }}" class="button">К услуге</a>
+                        <div class="button">К услуге</div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         @include('template.review')
@@ -308,7 +308,7 @@
                 <a href="#" class="button">Перейти</a>
             </div>
             <div class="blogContainer">
-                <div class="blogItem">
+                <a href="{{ route('blogPage') }}" class="blogItem">
                     <img src="{{ asset('images\image60.webp') }}" class="blogPhoto" alt="Монтаж кондиционеров" />
                     <div class="blogContent">
                         <div class="blogTitle">Монтаж кондиционеров</div>
@@ -317,10 +317,10 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="{{ route('blogPage') }}" class="button">Читать далее</a>
+                        <div class="button">Читать далее</div>
                     </div>
-                </div>
-                <div class="blogItem">
+                </a>
+                <a href="{{ route('blogPage') }}" class="blogItem">
                     <img src="{{ asset('images\image60.webp') }}" class="blogPhoto" alt="Монтаж кондиционеров" />
                     <div class="blogContent">
                         <div class="blogTitle">Монтаж кондиционеров</div>
@@ -329,10 +329,10 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="{{ route('blogPage') }}" class="button">Читать далее</a>
+                        <div class="button">Читать далее</div>
                     </div>
-                </div>
-                <div class="blogItem">
+                </a>
+                <a href="{{ route('blogPage') }}" class="blogItem">
                     <img src="{{ asset('images\image60.webp') }}" class="blogPhoto" alt="Монтаж кондиционеров" />
                     <div class="blogContent">
                         <div class="blogTitle">Монтаж кондиционеров</div>
@@ -341,9 +341,9 @@
                             навыков, поскольку правильная установка
                             обеспечивает эффективность работы устройства, безопасность и долговечность.
                         </p>
-                        <a href="{{ route('blogPage') }}" class="button">Читать далее</a>
+                        <div class="button">Читать далее</div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="container textBlock">

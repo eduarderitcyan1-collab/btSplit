@@ -39,6 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 15px;
 }
 
@@ -47,6 +48,33 @@
   font-weight: 500;
   font-size: var(--mainText);
   color: var(--dark);
+  transition: 0.5s;
+  position: relative;
+}
+
+.container .footerContent .menu .menuItem.active,
+.container .footerContent .menu .menuItem:hover {
+  color: var(--blue);
+}
+
+.container .footerContent .menu .menuItem.active:before,
+.container .footerContent .menu .menuItem:before {
+  content: '';
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: 50%;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--blue);
+  transform: translateX(50%);
+  transition: 0.5s;
+}
+
+.container .footerContent .menu .menuItem.active:before,
+.container .footerContent .menu .menuItem:hover:before {
+  width: 110%;
 }
 
 .container .footerWrapper .phone {

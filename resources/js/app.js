@@ -5,7 +5,6 @@ window.$ = window.jQuery = $
 
 // ...существующий код...
 jQuery(document).ready(function ($) {
-  console.log('jQuery работает!')
   $('.my-element').hide()
 })
 
