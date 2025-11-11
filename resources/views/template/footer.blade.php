@@ -14,7 +14,7 @@
                     В нашем ассортименте – более 200 самых разнообразных моделей климатического оборудования от ведущих
                     мировых производителей.
                 </p>
-                <a href="#" class="button" id="bid">Задать вопрос</a>
+                <div class="button" id="bid">Задать вопрос</div>
             </div>
             <div class="menu" id="menu">
                 <a href="/" class="menuItem">Главная</a>
@@ -56,3 +56,7 @@
         </div>
     </div>
 </footer>
+
+<div class="popupModal">
+    @include('template.formBlock')
+</div>

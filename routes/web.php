@@ -57,3 +57,7 @@ Route::get('/single-product', function () {
 Route::get('/checkout', function () {
     return view('checkout');
 })->name('checkout');
+
+Route::get('/thanks', function () {
+    return view('thanks');
+})->name('thanks');

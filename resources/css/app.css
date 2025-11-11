@@ -82,6 +82,7 @@ body {
     border-radius: 20px;
     border: none;
     cursor: pointer;
+    text-align: center;
 }
 
 .bal {
@@ -210,6 +211,10 @@ ol {
     background-repeat: no-repeat;
     transform: rotate(-180deg);
     z-index: -1;
+}
+
+.form .closeBtn {
+    opacity: 0;
 }
 
 .form .formWrapper {
@@ -457,6 +462,47 @@ ol {
     }
 }
 
+.popupModal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.popupModal.active {
+    display: flex !important;
+}
+
+.popupModal .form .closeBtn {
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popupModal .form .closeBtn svg {
+    width: 15px;
+    height: 15px;
+}
+
+.popupModal .form {
+    display: flex !important;
+    flex-direction: column;
+    width: calc(1400px - 900px);
+}
+
+.popupModal .form .formWrapper {
+    text-align: center;
+}
+
+.popupModal .form .FormPhoto {
+    display: none;
+}
+
 @media (max-width: 1440px) {
     .page {
         padding: 25px 50px;
@@ -583,5 +629,9 @@ ol {
 
     .brand img {
         height: 20px;
+    }
+
+    .popupModal .form {
+        width: calc(1400px - 1100px);
     }
 }
